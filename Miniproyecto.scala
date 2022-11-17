@@ -8,12 +8,22 @@ val fb = f(b)
 
 // Metodo Simpsom 1/3 compuesto
 
- def integracioncomp(a: Int, n: Int, f: Double => Double):Double = {
-    val intermedio = (J:Double)=> f(xJ(2*j-2)) +4*f(xJ(2*j-1))+f(xj(2*j))
-    val h = (b-a)/n
-    val xJ = (J:Double)=>a+(j*h)
-    (1 to 2).map/(intermedio(_))(h/3)
+ def integracioncomp(a: Double, b: Int, c: Double, f: Double => Double):Double = {
+    val intermedio = (j:Double)=> f(xj(2*j-2)) +4*f(xj(2*j-1))+f(xj(2*j))
+    val h = (b-a)/c
+    val xj = (j:Double)=>a+(j*h)
+    (h/3) * (1 to (n/2)).map(intermedio(_)).sum
     }
+
+def integracionEx(a:Double, b:Double, f:Double => Double):Double = {
+    val c = 2* (b-a)
+    val intgr = (j:double) => f(j*h)
+}
+
+
+def iFuncionERR(a : Double, b : Double) = (Math.abs(a-b)
+)
+
 
 
   
